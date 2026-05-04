@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Athena — AI academic advising platform that helps students get fast, cited guidance and helps advisors manage degree plans and requests in one place.">
+
+  <title>Athena — AI Academic Advising for Universities</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<!-- ══ NAVIGATION ══════════════════════════════════════════ -->
+<nav>
+  <a href="#hero" class="logo" aria-label="Athena home">
+    <img src="assets/images/logo.png" alt="Athena" height="54" style="display:block;">
+  </a>
+
+  <div class="nav-links" role="navigation" aria-label="Main navigation">
+    <a href="#platform">Platform</a>
+    <a href="#students">Students</a>
+    <a href="#advisors">Advisors</a>
+    <a href="#lms">LMS</a>
+    <a href="#security">Security</a>
+  </div>
+
+  <button class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+      <path d="M3 5h14M3 10h14M3 15h14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+    </svg>
+  </button>
+</nav>
+
+
+<!-- ══ HERO ════════════════════════════════════════════════ -->
+<div class="hero" id="hero">
+
+  <div class="announce-pill anim d1">
+    <span class="pill-icon" aria-hidden="true">✦</span>
+    Now available for Canvas &amp; Blackboard —
+    <a href="#lms">See integration</a>
+  </div>
+
+  <h1 class="anim d2">AI Advising<br>for Universities</h1>
+
+  <p class="hero-sub anim d3">
+    Athena helps students get fast, cited academic guidance and helps advisors
+    manage students, degree plans, and requests in one place.
+  </p>
+
+  <div class="hero-btns anim d4">
+    <a href="#demo" class="btn-hero-primary">Book a demo</a>
+  </div>
+
+  <!-- Product preview card -->
+  <div class="hero-card-wrap anim d5" id="platform">
+    <div class="hero-card-topbar">
+      <div style="display:flex;gap:5px;" aria-hidden="true">
+        <div class="hc-dot"></div>
+        <div class="hc-dot"></div>
+        <div class="hc-dot"></div>
+      </div>
+      <span class="hero-card-topbar-title">Athena</span>
+      <div style="width:50px;"></div>
+    </div>
+
+    <div class="hc-app-nav" aria-hidden="true">
+        <div class="hc-app-nav-links">
+          <span>
+            <svg width="13" height="13" viewBox="0 0 13 13" fill="none"><path d="M2 3h9M2 6.5h9M2 10h5" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg>
+            My Degree Plan
+          </span>
+          <span>
+            <svg width="13" height="13" viewBox="0 0 13 13" fill="none"><path d="M11 4H2a.7.7 0 00-.7.7v5.6a.7.7 0 00.7.7h2.5l2.5 1.5-.5-1.5H11a.7.7 0 00.7-.7V4.7A.7.7 0 0011 4z" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"/></svg>
+            History
+          </span>
+          <span class="hc-app-new-chat">
+            <svg width="13" height="13" viewBox="0 0 13 13" fill="none"><path d="M6.5 2v9M2 6.5h9" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg>
+            New chat
+          </span>
+        </div>
+        <div class="hc-app-user">
+          <span class="hc-app-username">John Bates</span>
+          <span class="hc-app-dept">IDIS</span>
+          <span class="hc-app-logout">Log out</span>
+        </div>
+      </div>
+
+      <div class="hc-centered-body" aria-hidden="true">
+        <div class="hc-centered-greeting">Hi, How can I help?</div>
+        <div class="hc-centered-input">
+          <span class="hc-centered-placeholder">Ask me about grades, degree plan, assignments…</span>
+          <div class="hc-send">
+            <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M5 1v8M1 5l4-4 4 4" stroke="white" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+        </div>
+      </div>
+  </div>
+
+</div><!-- /hero -->
+
+
+<!-- ══ STUDENTS 1: DEGREE PLANNING ═════════════════════════ -->
+<section class="feat-section" id="students">
+  <div class="feat-inner">
+
+    <div class="feat-text anim">
+      <div class="feat-label"><span class="feat-label-bar" aria-hidden="true"></span>Students</div>
+      <h2 class="feat-h2">Plan Your Path to Graduation</h2>
+      <p class="feat-desc">
+        Build your term-by-term degree plan, ask questions right in the workspace,
+        and request advisor approval — all without leaving the page.
+      </p>
+      <ul class="feat-list">
+        <li>
+          <span class="feat-check" aria-hidden="true"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5 3.5-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          Generate and edit term-by-term degree plans
+        </li>
+        <li>
+          <span class="feat-check" aria-hidden="true"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5 3.5-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          Ask questions about your plan inline
+        </li>
+        <li>
+          <span class="feat-check" aria-hidden="true"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5 3.5-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          Submit your plan for advisor review and approval
+        </li>
+        <li>
+          <span class="feat-check" aria-hidden="true"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5 3.5-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          See prerequisite checks in real time
+        </li>
+        <li>
+          <span class="feat-check" aria-hidden="true"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5 3.5-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          Track plan status and advisor feedback
+        </li>
+      </ul>
+    </div>
+
+    <div class="browser-outer anim">
+      <div class="browser-window">
+        <div class="browser-tabbar">
+          <div class="browser-dots">
+            <span style="background:#FF5F57"></span>
+            <span style="background:#FEBC2E"></span>
+            <span style="background:#28C840"></span>
+          </div>
+          <div class="browser-tab-active">
+            <img src="assets/images/athena_logo.png" alt="" height="12" style="display:block;">
+            <span>Athena</span>
+            <svg width="8" height="8" viewBox="0 0 8 8" fill="none"><path d="M1.5 1.5l5 5M6.5 1.5l-5 5" stroke="#AAA" stroke-width="1.2" stroke-linecap="round"/></svg>
+          </div>
+        </div>
+        <div class="browser-urlrow">
+          <div class="browser-nav-btns">
+            <svg width="13" height="13" viewBox="0 0 13 13" fill="none"><path d="M8.5 2.5L4 6.5l4.5 4" stroke="#888" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <svg width="13" height="13" viewBox="0 0 13 13" fill="none"><path d="M4.5 2.5L9 6.5l-4.5 4" stroke="#CCC" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <img src="assets/images/reload.png" alt="" height="13" style="display:block;">
+          </div>
+          <div class="browser-urlbar">
+            <span class="browser-url-text">app.athena.ai</span>
+            <svg width="11" height="11" viewBox="0 0 11 11" fill="none"><path d="M5.5 1.5l1.1 2.3 2.5.35-1.8 1.75.43 2.55L5.5 7.3 3.27 8.45 3.7 5.9 1.9 4.15l2.5-.35z" stroke="#CCC" stroke-width="1" stroke-linejoin="round"/></svg>
+          </div>
+          <div class="browser-right-icons">
+            <svg width="17" height="17" viewBox="0 0 17 17" fill="none"><circle cx="8.5" cy="8.5" r="7.5" stroke="#DDD"/><circle cx="8.5" cy="6.5" r="2.5" stroke="#DDD"/><path d="M2.5 15c1-3 3.2-4.5 6-4.5s5 1.5 6 4.5" stroke="#DDD" stroke-linecap="round"/></svg>
+            <svg width="13" height="13" viewBox="0 0 13 13" fill="none"><circle cx="6.5" cy="2.5" r="1" fill="#CCC"/><circle cx="6.5" cy="6.5" r="1" fill="#CCC"/><circle cx="6.5" cy="10.5" r="1" fill="#CCC"/></svg>
+          </div>
+        </div>
+        <img src="assets/gifs/submit_for_review.gif" alt="Degree planning workspace" style="width:100%;display:block;">
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ══ STUDENTS 2: TRANSFER CREDIT CHAT ════════════════════ -->
+<section class="feat-section">
+  <div class="feat-inner reverse">
+
+    <div class="feat-text anim">
+      <div class="feat-label"><span class="feat-label-bar" aria-hidden="true"></span>Students</div>
+      <h2 class="feat-h2">Get Answers Instantly</h2>
+      <p class="feat-desc">
+        Ask about transfer credits, graduation requirements, or anything academic —
+        and get cited answers from official university sources in seconds.
+      </p>
+      <ul class="feat-list">
+        <li>
+          <span class="feat-check" aria-hidden="true"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5 3.5-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          Ask about transfer credit equivalencies
+        </li>
+        <li>
+          <span class="feat-check" aria-hidden="true"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5 3.5-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          Get cited answers from official university sources
+        </li>
+        <li>
+          <span class="feat-check" aria-hidden="true"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5 3.5-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          Ask about deadlines, GPA requirements, and course rules
+        </li>
+        <li>
+          <span class="feat-check" aria-hidden="true"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5 3.5-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          Catch academic issues before they become problems
+        </li>
+        <li>
+          <span class="feat-check" aria-hidden="true"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5 3.5-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          Find and message your assigned advisor
+        </li>
+      </ul>
+    </div>
+
+    <div class="browser-outer anim" id="gif-student-chat">
+      <div class="browser-window">
+        <div class="browser-tabbar">
+          <div class="browser-dots">
+            <span style="background:#FF5F57"></span>
+            <span style="background:#FEBC2E"></span>
+            <span style="background:#28C840"></span>
+          </div>
+          <div class="browser-tab-active">
+            <img src="assets/images/athena_logo.png" alt="" height="12" style="display:block;">
+            <span>Athena</span>
+            <svg width="8" height="8" viewBox="0 0 8 8" fill="none"><path d="M1.5 1.5l5 5M6.5 1.5l-5 5" stroke="#AAA" stroke-width="1.2" stroke-linecap="round"/></svg>
+          </div>
+        </div>
+        <div class="browser-urlrow">
+          <div class="browser-nav-btns">
+            <svg width="13" height="13" viewBox="0 0 13 13" fill="none"><path d="M8.5 2.5L4 6.5l4.5 4" stroke="#888" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <svg width="13" height="13" viewBox="0 0 13 13" fill="none"><path d="M4.5 2.5L9 6.5l-4.5 4" stroke="#CCC" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <img src="assets/images/reload.png" alt="" height="13" style="display:block;">
+          </div>
+          <div class="browser-urlbar">
+            <span class="browser-url-text">app.athena.ai</span>
+            <svg width="11" height="11" viewBox="0 0 11 11" fill="none"><path d="M5.5 1.5l1.1 2.3 2.5.35-1.8 1.75.43 2.55L5.5 7.3 3.27 8.45 3.7 5.9 1.9 4.15l2.5-.35z" stroke="#CCC" stroke-width="1" stroke-linejoin="round"/></svg>
+          </div>
+          <div class="browser-right-icons">
+            <svg width="17" height="17" viewBox="0 0 17 17" fill="none"><circle cx="8.5" cy="8.5" r="7.5" stroke="#DDD"/><circle cx="8.5" cy="6.5" r="2.5" stroke="#DDD"/><path d="M2.5 15c1-3 3.2-4.5 6-4.5s5 1.5 6 4.5" stroke="#DDD" stroke-linecap="round"/></svg>
+            <svg width="13" height="13" viewBox="0 0 13 13" fill="none"><circle cx="6.5" cy="2.5" r="1" fill="#CCC"/><circle cx="6.5" cy="6.5" r="1" fill="#CCC"/><circle cx="6.5" cy="10.5" r="1" fill="#CCC"/></svg>
+          </div>
+        </div>
+        <img src="assets/gifs/student_question.gif" alt="Student asking a question about transfer credits" style="width:100%;display:block;">
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ══ ADVISORS 1: DASHBOARD & REQUESTS ════════════════════ -->
+<section class="feat-section" id="advisors">
+  <div class="feat-inner">
+
+    <div class="feat-text anim">
+      <div class="feat-label"><span class="feat-label-bar" aria-hidden="true"></span>Advisors</div>
+      <h2 class="feat-h2">Never Miss a Student Who Needs Help</h2>
+      <p class="feat-desc">
+        See every student who needs attention on one dashboard. Open requests,
+        respond, and close the loop — without switching tabs.
+      </p>
+      <ul class="feat-list">
+        <li>
+          <span class="feat-check" aria-hidden="true"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5 3.5-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          See all students who need action at a glance
+        </li>
+        <li>
+          <span class="feat-check" aria-hidden="true"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5 3.5-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          Open and respond to student help requests
+        </li>
+        <li>
+          <span class="feat-check" aria-hidden="true"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5 3.5-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          Prioritize by urgency and request type
+        </li>
+        <li>
+          <span class="feat-check" aria-hidden="true"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5 3.5-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          Review, approve, or return student degree plans
+        </li>
+        <li>
+          <span class="feat-check" aria-hidden="true"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5 3.5-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          Step into shared student chats when needed
+        </li>
+      </ul>
+    </div>
+
+    <div class="browser-outer anim" id="gif-advisor-dashboard">
+      <div class="browser-window">
+        <div class="browser-tabbar">
+          <div class="browser-dots">
+            <span style="background:#FF5F57"></span>
+            <span style="background:#FEBC2E"></span>
+            <span style="background:#28C840"></span>
+          </div>
+          <div class="browser-tab-active">
+            <img src="assets/images/athena_logo.png" alt="" height="12" style="display:block;">
+            <span>Athena</span>
+            <svg width="8" height="8" viewBox="0 0 8 8" fill="none"><path d="M1.5 1.5l5 5M6.5 1.5l-5 5" stroke="#AAA" stroke-width="1.2" stroke-linecap="round"/></svg>
+          </div>
+        </div>
+        <div class="browser-urlrow">
+          <div class="browser-nav-btns">
+            <svg width="13" height="13" viewBox="0 0 13 13" fill="none"><path d="M8.5 2.5L4 6.5l4.5 4" stroke="#888" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <svg width="13" height="13" viewBox="0 0 13 13" fill="none"><path d="M4.5 2.5L9 6.5l-4.5 4" stroke="#CCC" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <img src="assets/images/reload.png" alt="" height="13" style="display:block;">
+          </div>
+          <div class="browser-urlbar">
+            <span class="browser-url-text">app.athena.ai</span>
+            <svg width="11" height="11" viewBox="0 0 11 11" fill="none"><path d="M5.5 1.5l1.1 2.3 2.5.35-1.8 1.75.43 2.55L5.5 7.3 3.27 8.45 3.7 5.9 1.9 4.15l2.5-.35z" stroke="#CCC" stroke-width="1" stroke-linejoin="round"/></svg>
+          </div>
+          <div class="browser-right-icons">
+            <svg width="17" height="17" viewBox="0 0 17 17" fill="none"><circle cx="8.5" cy="8.5" r="7.5" stroke="#DDD"/><circle cx="8.5" cy="6.5" r="2.5" stroke="#DDD"/><path d="M2.5 15c1-3 3.2-4.5 6-4.5s5 1.5 6 4.5" stroke="#DDD" stroke-linecap="round"/></svg>
+            <svg width="13" height="13" viewBox="0 0 13 13" fill="none"><circle cx="6.5" cy="2.5" r="1" fill="#CCC"/><circle cx="6.5" cy="6.5" r="1" fill="#CCC"/><circle cx="6.5" cy="10.5" r="1" fill="#CCC"/></svg>
+          </div>
+        </div>
+        <img src="assets/gifs/advisor_dash2.gif" alt="Advisor dashboard" style="width:100%;display:block;filter:brightness(1.037);">
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ══ ADVISORS 2: STUDENT PROFILE ═════════════════════════ -->
+<section class="feat-section">
+  <div class="feat-inner reverse">
+
+    <div class="feat-text anim">
+      <div class="feat-label"><span class="feat-label-bar" aria-hidden="true"></span>Advisors</div>
+      <h2 class="feat-h2">Know Every Student Before the Meeting</h2>
+      <p class="feat-desc">
+        Select any student in your caseload and instantly surface their academic
+        profile, degree plan, and recent activity — so every session starts informed.
+      </p>
+      <ul class="feat-list">
+        <li>
+          <span class="feat-check" aria-hidden="true"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5 3.5-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          Search and select any student in your department
+        </li>
+        <li>
+          <span class="feat-check" aria-hidden="true"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5 3.5-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          View their degree plan, GPA, and course history
+        </li>
+        <li>
+          <span class="feat-check" aria-hidden="true"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5 3.5-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          Ask Athena questions about a student's academic status
+        </li>
+        <li>
+          <span class="feat-check" aria-hidden="true"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5 3.5-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          Generate a pre-meeting briefing in seconds
+        </li>
+        <li>
+          <span class="feat-check" aria-hidden="true"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5 3.5-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          See their conversation history and open requests
+        </li>
+      </ul>
+    </div>
+
+    <div class="browser-outer anim" id="gif-advisor-student">
+      <div class="browser-window">
+        <div class="browser-tabbar">
+          <div class="browser-dots">
+            <span style="background:#FF5F57"></span>
+            <span style="background:#FEBC2E"></span>
+            <span style="background:#28C840"></span>
+          </div>
+          <div class="browser-tab-active">
+            <img src="assets/images/athena_logo.png" alt="" height="12" style="display:block;">
+            <span>Athena</span>
+            <svg width="8" height="8" viewBox="0 0 8 8" fill="none"><path d="M1.5 1.5l5 5M6.5 1.5l-5 5" stroke="#AAA" stroke-width="1.2" stroke-linecap="round"/></svg>
+          </div>
+        </div>
+        <div class="browser-urlrow">
+          <div class="browser-nav-btns">
+            <svg width="13" height="13" viewBox="0 0 13 13" fill="none"><path d="M8.5 2.5L4 6.5l4.5 4" stroke="#888" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <svg width="13" height="13" viewBox="0 0 13 13" fill="none"><path d="M4.5 2.5L9 6.5l-4.5 4" stroke="#CCC" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <img src="assets/images/reload.png" alt="" height="13" style="display:block;">
+          </div>
+          <div class="browser-urlbar">
+            <span class="browser-url-text">app.athena.ai</span>
+            <svg width="11" height="11" viewBox="0 0 11 11" fill="none"><path d="M5.5 1.5l1.1 2.3 2.5.35-1.8 1.75.43 2.55L5.5 7.3 3.27 8.45 3.7 5.9 1.9 4.15l2.5-.35z" stroke="#CCC" stroke-width="1" stroke-linejoin="round"/></svg>
+          </div>
+          <div class="browser-right-icons">
+            <svg width="17" height="17" viewBox="0 0 17 17" fill="none"><circle cx="8.5" cy="8.5" r="7.5" stroke="#DDD"/><circle cx="8.5" cy="6.5" r="2.5" stroke="#DDD"/><path d="M2.5 15c1-3 3.2-4.5 6-4.5s5 1.5 6 4.5" stroke="#DDD" stroke-linecap="round"/></svg>
+            <svg width="13" height="13" viewBox="0 0 13 13" fill="none"><circle cx="6.5" cy="2.5" r="1" fill="#CCC"/><circle cx="6.5" cy="6.5" r="1" fill="#CCC"/><circle cx="6.5" cy="10.5" r="1" fill="#CCC"/></svg>
+          </div>
+        </div>
+        <img src="assets/gifs/advisor_question.gif" alt="Advisor asking a question about a student" style="width:100%;display:block;">
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ══ STATEMENT BAR ═════════════════════════════════════ -->
+<div class="statement-bar">
+  <div class="statement-bar-inner anim">
+    <p class="statement-bar-eyebrow">The advising gap is real.</p>
+    <p class="statement-bar-quote">Most students wait days for answers that should take seconds. Athena makes advising <em>instant.</em></p>
+  </div>
+</div>
+
+
+<!-- ══ LMS ═════════════════════════════════════════════════ -->
+<section class="feat-section" id="lms">
+  <div class="feat-stacked">
+
+    <div class="feat-stacked-header anim">
+      <div class="feat-label" style="justify-content:center;"><span class="feat-label-bar" aria-hidden="true"></span>LMS Integration</div>
+      <h2 class="feat-h2" style="text-align:center;">LMS Integration</h2>
+      <p class="feat-desc" style="text-align:center;margin-left:auto;margin-right:auto;">
+        Athena is built to work with university learning management systems.
+      </p>
+      <ul class="feat-list feat-list-grid">
+        <li>
+          <span class="feat-check" aria-hidden="true"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5 3.5-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          Live grade data
+        </li>
+        <li>
+          <span class="feat-check" aria-hidden="true"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5 3.5-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          Assignment deadlines
+        </li>
+        <li>
+          <span class="feat-check" aria-hidden="true"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5 3.5-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          Current-term performance tracking
+        </li>
+        <li>
+          <span class="feat-check" aria-hidden="true"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5 3.5-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          Course-by-course progress
+        </li>
+        <li>
+          <span class="feat-check" aria-hidden="true"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5 3.5-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          Weekly academic reports
+        </li>
+        <li>
+          <span class="feat-check" aria-hidden="true"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5 3.5-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          Early risk detection based on real student performance
+        </li>
+      </ul>
+    </div>
+
+    <div class="lms-marquee anim">
+      <p class="lms-marquee-label">Integrates with every major LMS, including:</p>
+      <div class="lms-marquee-track">
+        <div class="lms-marquee-inner">
+          <img src="assets/LMS%20slideshow/canvas.png"        alt="Canvas"           class="lms-logo">
+          <img src="assets/LMS%20slideshow/blackboard.png"    alt="Blackboard"       class="lms-logo">
+          <img src="assets/LMS%20slideshow/brightspace.png"   alt="Brightspace"      class="lms-logo">
+          <img src="assets/LMS%20slideshow/moodle.png"        alt="Moodle"           class="lms-logo">
+          <img src="assets/LMS%20slideshow/googleclassroom.png" alt="Google Classroom" class="lms-logo" style="height:56px;">
+          <img src="assets/LMS%20slideshow/docebo.webp"       alt="Docebo"           class="lms-logo">
+          <img src="assets/LMS%20slideshow/skilljar.webp"     alt="Skilljar"         class="lms-logo">
+          <!-- duplicate set for seamless loop -->
+          <img src="assets/LMS%20slideshow/canvas.png"        alt="" aria-hidden="true" class="lms-logo">
+          <img src="assets/LMS%20slideshow/blackboard.png"    alt="" aria-hidden="true" class="lms-logo">
+          <img src="assets/LMS%20slideshow/brightspace.png"   alt="" aria-hidden="true" class="lms-logo">
+          <img src="assets/LMS%20slideshow/moodle.png"        alt="" aria-hidden="true" class="lms-logo">
+          <img src="assets/LMS%20slideshow/googleclassroom.png" alt="" aria-hidden="true" class="lms-logo">
+          <img src="assets/LMS%20slideshow/docebo.webp"       alt="" aria-hidden="true" class="lms-logo">
+          <img src="assets/LMS%20slideshow/skilljar.webp"     alt="" aria-hidden="true" class="lms-logo">
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+</section>
+
+
+<!-- ══ SECURITY ════════════════════════════════════════════ -->
+<section class="feat-section" id="security" style="padding-bottom: 264px;">
+  <div class="feat-stacked">
+
+    <div class="feat-stacked-header anim">
+      <div class="feat-label" style="justify-content:center;"><span class="feat-label-bar" aria-hidden="true"></span>Security</div>
+      <h2 class="feat-h2" style="text-align:center;">Security &amp; Privacy</h2>
+      <p class="feat-desc" style="text-align:center;margin-left:auto;margin-right:auto;">
+        Athena is built with student privacy, institutional access control,
+        and academic data protection in mind.
+      </p>
+      <ul class="feat-list feat-list-grid">
+        <li>
+          <span class="feat-check" aria-hidden="true"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5 3.5-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          Integrated information access controls
+        </li>
+
+        <li>
+          <span class="feat-check" aria-hidden="true"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5 3.5-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          Designed to fit higher-ed privacy expectations
+        </li>
+        <li>
+          <span class="feat-check" aria-hidden="true"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5 3.5-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          FERPA compliant
+        </li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ══ FOOTER CTA ══════════════════════════════════════════ -->
+<div class="footer-cta" id="demo">
+  <div class="footer-cta-inner anim">
+    <h2>Ready to see Athena in action?</h2>
+    <p>
+      Get a personalized demo and see how Athena can transform
+      academic advising at your institution.
+    </p>
+    <a href="mailto:demo@athenahq.ai" class="btn-cta-white">Book a demo</a>
+  </div>
+</div>
+
+
+<!-- ══ FOOTER ══════════════════════════════════════════════ -->
+<footer>
+  <span class="footer-logo">Athena</span>
+  <span class="footer-copy">© 2025 Athena. All rights reserved.</span>
+</footer>
+
+
+<!-- Scripts -->
+<script src="js/main.js"></script>
+</body>
+</html>

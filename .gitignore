@@ -1,0 +1,19 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Editor
+.vscode/
+.idea/
+*.suo
+*.swp
+*.swo
+
+# Logs
+*.log
+
+# Local dev
+.claude/
+hello.txt
+Untitled

@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Athena — Color Scheme Options</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background: #F0F0F0;
+      padding: 48px 32px;
+      color: #111;
+    }
+
+    .page-title {
+      font-family: 'Syne', sans-serif;
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 8px;
+      color: #111;
+    }
+    .page-sub {
+      font-size: 0.9rem;
+      color: #666;
+      margin-bottom: 48px;
+    }
+    .page-sub code {
+      background: #e0e0e0;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-size: 0.8rem;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(420px, 1fr));
+      gap: 28px;
+    }
+
+    /* ── Each scheme card ── */
+    .scheme {
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.1);
+    }
+
+    .scheme-preview {
+      padding: 32px 28px 28px;
+      background: var(--bg);
+      border-bottom: 1px solid var(--border);
+    }
+
+    /* Mini nav */
+    .mini-nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 32px;
+    }
+    .mini-logo {
+      font-family: 'Syne', sans-serif;
+      font-weight: 700;
+      font-size: 1rem;
+      color: var(--text);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .mini-logo-dot {
+      width: 20px; height: 20px;
+      border-radius: 6px;
+      background: var(--accent);
+    }
+    .mini-nav-links {
+      display: flex;
+      gap: 14px;
+      font-size: 0.75rem;
+      color: var(--muted);
+      font-weight: 500;
+    }
+    .mini-btn {
+      padding: 6px 14px;
+      border-radius: 100px;
+      background: var(--accent);
+      color: #fff;
+      font-size: 0.75rem;
+      font-weight: 600;
+    }
+
+    /* Mini hero */
+    .mini-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 4px 12px;
+      border-radius: 100px;
+      border: 1px solid var(--border-2);
+      background: var(--bg-soft);
+      font-size: 0.7rem;
+      font-weight: 500;
+      color: var(--text-2);
+      margin-bottom: 16px;
+    }
+    .mini-pill-dot {
+      width: 5px; height: 5px;
+      border-radius: 50%;
+      background: var(--accent);
+    }
+    .mini-h1 {
+      font-family: 'Syne', sans-serif;
+      font-weight: 700;
+      font-size: 1.75rem;
+      letter-spacing: -0.02em;
+      line-height: 1.1;
+      color: var(--text);
+      margin-bottom: 10px;
+    }
+    .mini-sub {
+      font-size: 0.8rem;
+      color: var(--muted);
+      line-height: 1.65;
+      margin-bottom: 20px;
+      max-width: 320px;
+    }
+    .mini-btns {
+      display: flex;
+      gap: 8px;
+    }
+    .mini-btn-primary {
+      padding: 9px 20px;
+      border-radius: 100px;
+      background: var(--accent);
+      color: #fff;
+      font-size: 0.8rem;
+      font-weight: 600;
+    }
+    .mini-btn-dark {
+      padding: 9px 20px;
+      border-radius: 100px;
+      background: var(--text);
+      color: #fff;
+      font-size: 0.8rem;
+      font-weight: 600;
+    }
+
+    /* Mini feature strip */
+    .mini-features {
+      display: flex;
+      gap: 8px;
+      margin-top: 20px;
+      flex-wrap: wrap;
+    }
+    .mini-chip {
+      padding: 4px 10px;
+      border-radius: 6px;
+      border: 1px solid var(--border-2);
+      background: var(--bg-soft);
+      font-size: 0.68rem;
+      color: var(--muted);
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+    .mini-chip-dot {
+      width: 4px; height: 4px;
+      border-radius: 50%;
+      background: var(--accent);
+    }
+
+    /* Info bar */
+    .scheme-info {
+      background: white;
+      padding: 18px 22px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .scheme-name {
+      font-family: 'Syne', sans-serif;
+      font-weight: 700;
+      font-size: 0.9375rem;
+      color: #111;
+      margin-bottom: 3px;
+    }
+    .scheme-desc {
+      font-size: 0.76rem;
+      color: #777;
+    }
+    .scheme-swatches {
+      display: flex;
+      gap: 5px;
+    }
+    .swatch {
+      width: 22px; height: 22px;
+      border-radius: 100px;
+      border: 2px solid rgba(0,0,0,0.08);
+    }
+    .scheme-tag {
+      font-size: 0.68rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      padding: 3px 9px;
+      border-radius: 100px;
+      margin-top: 4px;
+      display: inline-block;
+    }
+
+    /* ════════════════════════════════════
+       SCHEME 1 — Current (Iris Purple)
+    ════════════════════════════════════ */
+    .scheme-1 {
+      --bg:       #FFFFFF;
+      --bg-soft:  #F5F3FF;
+      --bg-card:  #EDE9FF;
+      --text:     #0F0D26;
+      --text-2:   #3B3770;
+      --muted:    #8A86B0;
+      --accent:   #5B3FF8;
+      --border:   #E6E1F5;
+      --border-2: #D4CDF0;
+    }
+
+    /* ════════════════════════════════════
+       SCHEME 2 — Midnight Navy
+    ════════════════════════════════════ */
+    .scheme-2 {
+      --bg:       #FFFFFF;
+      --bg-soft:  #F0F4FF;
+      --bg-card:  #E4ECFF;
+      --text:     #0A1628;
+      --text-2:   #2C4270;
+      --muted:    #7A8FAD;
+      --accent:   #1A56DB;
+      --border:   #DDE5F5;
+      --border-2: #C5D3EE;
+    }
+
+    /* ════════════════════════════════════
+       SCHEME 3 — Emerald
+    ════════════════════════════════════ */
+    .scheme-3 {
+      --bg:       #FFFFFF;
+      --bg-soft:  #F0FBF6;
+      --bg-card:  #DCF5EA;
+      --text:     #0A2018;
+      --text-2:   #1A4A32;
+      --muted:    #6B9880;
+      --accent:   #059669;
+      --border:   #D5EDE4;
+      --border-2: #B8DDD0;
+    }
+
+    /* ════════════════════════════════════
+       SCHEME 4 — Slate (Warm Gray)
+    ════════════════════════════════════ */
+    .scheme-4 {
+      --bg:       #FAFAFA;
+      --bg-soft:  #F3F3F3;
+      --bg-card:  #EAEAEA;
+      --text:     #111111;
+      --text-2:   #444444;
+      --muted:    #888888;
+      --accent:   #111111;
+      --border:   #E0E0E0;
+      --border-2: #CCCCCC;
+    }
+
+    /* ════════════════════════════════════
+       SCHEME 5 — Amber / Gold
+    ════════════════════════════════════ */
+    .scheme-5 {
+      --bg:       #FFFDF5;
+      --bg-soft:  #FEF9E7;
+      --bg-card:  #FEF0C3;
+      --text:     #1A1200;
+      --text-2:   #4A3500;
+      --muted:    #9A8040;
+      --accent:   #D97706;
+      --border:   #F0E4C0;
+      --border-2: #E8D49A;
+    }
+
+    /* ════════════════════════════════════
+       SCHEME 6 — Rose / Coral
+    ════════════════════════════════════ */
+    .scheme-6 {
+      --bg:       #FFFFFF;
+      --bg-soft:  #FFF5F5;
+      --bg-card:  #FFE8E8;
+      --text:     #1A0808;
+      --text-2:   #4A1818;
+      --muted:    #A06060;
+      --accent:   #E11D48;
+      --border:   #F5DADA;
+      --border-2: #ECC8C8;
+    }
+
+    /* ════════════════════════════════════
+       SCHEME 7 — Teal / Cyan
+    ════════════════════════════════════ */
+    .scheme-7 {
+      --bg:       #FFFFFF;
+      --bg-soft:  #F0FAFA;
+      --bg-card:  #DCF5F5;
+      --text:     #051A1A;
+      --text-2:   #0F4040;
+      --muted:    #508080;
+      --accent:   #0D9488;
+      --border:   #C8E8E8;
+      --border-2: #A8D8D8;
+    }
+
+    /* ════════════════════════════════════
+       SCHEME 8 — Indigo + Warm
+    ════════════════════════════════════ */
+    .scheme-8 {
+      --bg:       #FEFEFE;
+      --bg-soft:  #F4F3FF;
+      --bg-card:  #EAE8FF;
+      --text:     #1E1B4B;
+      --text-2:   #3730A3;
+      --muted:    #6D6AAA;
+      --accent:   #4338CA;
+      --border:   #E0DEFF;
+      --border-2: #C7C4FA;
+    }
+
+    .current-tag {
+      background: #E8FFF0;
+      color: #166534;
+    }
+    .recommended-tag {
+      background: #EEF2FF;
+      color: #3730A3;
+    }
+  </style>
+</head>
+<body>
+
+<div class="page-title">Color Scheme Options</div>
+<p class="page-sub">Pick one and tell me the number — I'll apply it to the site. Current scheme is Option 1.</p>
+
+<div class="grid">
+
+  <!-- ── OPTION 1: Current Purple ── -->
+  <div class="scheme scheme-1">
+    <div class="scheme-preview">
+      <div class="mini-nav">
+        <div class="mini-logo"><div class="mini-logo-dot"></div>Athena</div>
+        <div class="mini-nav-links"><span>Platform</span><span>Students</span><span>Advisors</span></div>
+        <div class="mini-btn">Request Demo</div>
+      </div>
+      <div class="mini-pill"><span class="mini-pill-dot"></span>Now available for Canvas &amp; Blackboard</div>
+      <div class="mini-h1">AI Academic Advising<br>for Universities</div>
+      <div class="mini-sub">Athena helps students get fast, cited academic guidance and helps advisors manage students and degree plans.</div>
+      <div class="mini-btns">
+        <div class="mini-btn-primary">Get started</div>
+        <div class="mini-btn-dark">Book a demo</div>
+      </div>
+      <div class="mini-features">
+        <div class="mini-chip"><span class="mini-chip-dot"></span>Degree Planning</div>
+        <div class="mini-chip"><span class="mini-chip-dot"></span>Smart Routing</div>
+        <div class="mini-chip"><span class="mini-chip-dot"></span>Cited Sources</div>
+      </div>
+    </div>
+    <div class="scheme-info">
+      <div>
+        <div class="scheme-name">1 — Iris Purple</div>
+        <div class="scheme-desc">Current scheme. Bold, modern, tech-forward.</div>
+        <span class="scheme-tag current-tag">Current</span>
+      </div>
+      <div class="scheme-swatches">
+        <div class="swatch" style="background:#0F0D26"></div>
+        <div class="swatch" style="background:#5B3FF8"></div>
+        <div class="swatch" style="background:#EDE9FF"></div>
+        <div class="swatch" style="background:#FFFFFF"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── OPTION 2: Midnight Navy ── -->
+  <div class="scheme scheme-2">
+    <div class="scheme-preview">
+      <div class="mini-nav">
+        <div class="mini-logo"><div class="mini-logo-dot"></div>Athena</div>
+        <div class="mini-nav-links"><span>Platform</span><span>Students</span><span>Advisors</span></div>
+        <div class="mini-btn">Request Demo</div>
+      </div>
+      <div class="mini-pill"><span class="mini-pill-dot"></span>Now available for Canvas &amp; Blackboard</div>
+      <div class="mini-h1">AI Academic Advising<br>for Universities</div>
+      <div class="mini-sub">Athena helps students get fast, cited academic guidance and helps advisors manage students and degree plans.</div>
+      <div class="mini-btns">
+        <div class="mini-btn-primary">Get started</div>
+        <div class="mini-btn-dark">Book a demo</div>
+      </div>
+      <div class="mini-features">
+        <div class="mini-chip"><span class="mini-chip-dot"></span>Degree Planning</div>
+        <div class="mini-chip"><span class="mini-chip-dot"></span>Smart Routing</div>
+        <div class="mini-chip"><span class="mini-chip-dot"></span>Cited Sources</div>
+      </div>
+    </div>
+    <div class="scheme-info">
+      <div>
+        <div class="scheme-name">2 — Midnight Navy</div>
+        <div class="scheme-desc">Classic, institutional, trusted. Great for universities.</div>
+        <span class="scheme-tag recommended-tag">Recommended</span>
+      </div>
+      <div class="scheme-swatches">
+        <div class="swatch" style="background:#0A1628"></div>
+        <div class="swatch" style="background:#1A56DB"></div>
+        <div class="swatch" style="background:#E4ECFF"></div>
+        <div class="swatch" style="background:#FFFFFF"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── OPTION 3: Emerald ── -->
+  <div class="scheme scheme-3">
+    <div class="scheme-preview">
+      <div class="mini-nav">
+        <div class="mini-logo"><div class="mini-logo-dot"></div>Athena</div>
+        <div class="mini-nav-links"><span>Platform</span><span>Students</span><span>Advisors</span></div>
+        <div class="mini-btn">Request Demo</div>
+      </div>
+      <div class="mini-pill"><span class="mini-pill-dot"></span>Now available for Canvas &amp; Blackboard</div>
+      <div class="mini-h1">AI Academic Advising<br>for Universities</div>
+      <div class="mini-sub">Athena helps students get fast, cited academic guidance and helps advisors manage students and degree plans.</div>
+      <div class="mini-btns">
+        <div class="mini-btn-primary">Get started</div>
+        <div class="mini-btn-dark">Book a demo</div>
+      </div>
+      <div class="mini-features">
+        <div class="mini-chip"><span class="mini-chip-dot"></span>Degree Planning</div>
+        <div class="mini-chip"><span class="mini-chip-dot"></span>Smart Routing</div>
+        <div class="mini-chip"><span class="mini-chip-dot"></span>Cited Sources</div>
+      </div>
+    </div>
+    <div class="scheme-info">
+      <div>
+        <div class="scheme-name">3 — Emerald Green</div>
+        <div class="scheme-desc">Fresh, growth-oriented, calming. Stands out from edtech.</div>
+      </div>
+      <div class="scheme-swatches">
+        <div class="swatch" style="background:#0A2018"></div>
+        <div class="swatch" style="background:#059669"></div>
+        <div class="swatch" style="background:#DCF5EA"></div>
+        <div class="swatch" style="background:#FFFFFF"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── OPTION 4: Slate / Monochrome ── -->
+  <div class="scheme scheme-4">
+    <div class="scheme-preview">
+      <div class="mini-nav">
+        <div class="mini-logo"><div class="mini-logo-dot"></div>Athena</div>
+        <div class="mini-nav-links"><span>Platform</span><span>Students</span><span>Advisors</span></div>
+        <div class="mini-btn">Request Demo</div>
+      </div>
+      <div class="mini-pill"><span class="mini-pill-dot"></span>Now available for Canvas &amp; Blackboard</div>
+      <div class="mini-h1">AI Academic Advising<br>for Universities</div>
+      <div class="mini-sub">Athena helps students get fast, cited academic guidance and helps advisors manage students and degree plans.</div>
+      <div class="mini-btns">
+        <div class="mini-btn-primary">Get started</div>
+        <div class="mini-btn-dark" style="background:#333">Book a demo</div>
+      </div>
+      <div class="mini-features">
+        <div class="mini-chip"><span class="mini-chip-dot"></span>Degree Planning</div>
+        <div class="mini-chip"><span class="mini-chip-dot"></span>Smart Routing</div>
+        <div class="mini-chip"><span class="mini-chip-dot"></span>Cited Sources</div>
+      </div>
+    </div>
+    <div class="scheme-info">
+      <div>
+        <div class="scheme-name">4 — Slate / Monochrome</div>
+        <div class="scheme-desc">Minimal, editorial, premium. Lets content lead.</div>
+      </div>
+      <div class="scheme-swatches">
+        <div class="swatch" style="background:#111111"></div>
+        <div class="swatch" style="background:#444444"></div>
+        <div class="swatch" style="background:#EAEAEA"></div>
+        <div class="swatch" style="background:#FAFAFA"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── OPTION 5: Amber / Gold ── -->
+  <div class="scheme scheme-5">
+    <div class="scheme-preview">
+      <div class="mini-nav">
+        <div class="mini-logo"><div class="mini-logo-dot"></div>Athena</div>
+        <div class="mini-nav-links"><span>Platform</span><span>Students</span><span>Advisors</span></div>
+        <div class="mini-btn">Request Demo</div>
+      </div>
+      <div class="mini-pill"><span class="mini-pill-dot"></span>Now available for Canvas &amp; Blackboard</div>
+      <div class="mini-h1">AI Academic Advising<br>for Universities</div>
+      <div class="mini-sub">Athena helps students get fast, cited academic guidance and helps advisors manage students and degree plans.</div>
+      <div class="mini-btns">
+        <div class="mini-btn-primary">Get started</div>
+        <div class="mini-btn-dark">Book a demo</div>
+      </div>
+      <div class="mini-features">
+        <div class="mini-chip"><span class="mini-chip-dot"></span>Degree Planning</div>
+        <div class="mini-chip"><span class="mini-chip-dot"></span>Smart Routing</div>
+        <div class="mini-chip"><span class="mini-chip-dot"></span>Cited Sources</div>
+      </div>
+    </div>
+    <div class="scheme-info">
+      <div>
+        <div class="scheme-name">5 — Amber / Gold</div>
+        <div class="scheme-desc">Warm, academic, wisdom. Nods to Athena (goddess of wisdom).</div>
+      </div>
+      <div class="scheme-swatches">
+        <div class="swatch" style="background:#1A1200"></div>
+        <div class="swatch" style="background:#D97706"></div>
+        <div class="swatch" style="background:#FEF0C3"></div>
+        <div class="swatch" style="background:#FFFDF5"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── OPTION 6: Rose / Coral ── -->
+  <div class="scheme scheme-6">
+    <div class="scheme-preview">
+      <div class="mini-nav">
+        <div class="mini-logo"><div class="mini-logo-dot"></div>Athena</div>
+        <div class="mini-nav-links"><span>Platform</span><span>Students</span><span>Advisors</span></div>
+        <div class="mini-btn">Request Demo</div>
+      </div>
+      <div class="mini-pill"><span class="mini-pill-dot"></span>Now available for Canvas &amp; Blackboard</div>
+      <div class="mini-h1">AI Academic Advising<br>for Universities</div>
+      <div class="mini-sub">Athena helps students get fast, cited academic guidance and helps advisors manage students and degree plans.</div>
+      <div class="mini-btns">
+        <div class="mini-btn-primary">Get started</div>
+        <div class="mini-btn-dark">Book a demo</div>
+      </div>
+      <div class="mini-features">
+        <div class="mini-chip"><span class="mini-chip-dot"></span>Degree Planning</div>
+        <div class="mini-chip"><span class="mini-chip-dot"></span>Smart Routing</div>
+        <div class="mini-chip"><span class="mini-chip-dot"></span>Cited Sources</div>
+      </div>
+    </div>
+    <div class="scheme-info">
+      <div>
+        <div class="scheme-name">6 — Rose / Coral</div>
+        <div class="scheme-desc">Energetic, friendly, approachable. Stands out boldly.</div>
+      </div>
+      <div class="scheme-swatches">
+        <div class="swatch" style="background:#1A0808"></div>
+        <div class="swatch" style="background:#E11D48"></div>
+        <div class="swatch" style="background:#FFE8E8"></div>
+        <div class="swatch" style="background:#FFFFFF"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── OPTION 7: Teal ── -->
+  <div class="scheme scheme-7">
+    <div class="scheme-preview">
+      <div class="mini-nav">
+        <div class="mini-logo"><div class="mini-logo-dot"></div>Athena</div>
+        <div class="mini-nav-links"><span>Platform</span><span>Students</span><span>Advisors</span></div>
+        <div class="mini-btn">Request Demo</div>
+      </div>
+      <div class="mini-pill"><span class="mini-pill-dot"></span>Now available for Canvas &amp; Blackboard</div>
+      <div class="mini-h1">AI Academic Advising<br>for Universities</div>
+      <div class="mini-sub">Athena helps students get fast, cited academic guidance and helps advisors manage students and degree plans.</div>
+      <div class="mini-btns">
+        <div class="mini-btn-primary">Get started</div>
+        <div class="mini-btn-dark">Book a demo</div>
+      </div>
+      <div class="mini-features">
+        <div class="mini-chip"><span class="mini-chip-dot"></span>Degree Planning</div>
+        <div class="mini-chip"><span class="mini-chip-dot"></span>Smart Routing</div>
+        <div class="mini-chip"><span class="mini-chip-dot"></span>Cited Sources</div>
+      </div>
+    </div>
+    <div class="scheme-info">
+      <div>
+        <div class="scheme-name">7 — Teal</div>
+        <div class="scheme-desc">Clean, tech-forward, trustworthy. Popular in SaaS.</div>
+      </div>
+      <div class="scheme-swatches">
+        <div class="swatch" style="background:#051A1A"></div>
+        <div class="swatch" style="background:#0D9488"></div>
+        <div class="swatch" style="background:#DCF5F5"></div>
+        <div class="swatch" style="background:#FFFFFF"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── OPTION 8: Deep Indigo ── -->
+  <div class="scheme scheme-8">
+    <div class="scheme-preview">
+      <div class="mini-nav">
+        <div class="mini-logo"><div class="mini-logo-dot"></div>Athena</div>
+        <div class="mini-nav-links"><span>Platform</span><span>Students</span><span>Advisors</span></div>
+        <div class="mini-btn">Request Demo</div>
+      </div>
+      <div class="mini-pill"><span class="mini-pill-dot"></span>Now available for Canvas &amp; Blackboard</div>
+      <div class="mini-h1">AI Academic Advising<br>for Universities</div>
+      <div class="mini-sub">Athena helps students get fast, cited academic guidance and helps advisors manage students and degree plans.</div>
+      <div class="mini-btns">
+        <div class="mini-btn-primary">Get started</div>
+        <div class="mini-btn-dark">Book a demo</div>
+      </div>
+      <div class="mini-features">
+        <div class="mini-chip"><span class="mini-chip-dot"></span>Degree Planning</div>
+        <div class="mini-chip"><span class="mini-chip-dot"></span>Smart Routing</div>
+        <div class="mini-chip"><span class="mini-chip-dot"></span>Cited Sources</div>
+      </div>
+    </div>
+    <div class="scheme-info">
+      <div>
+        <div class="scheme-name">8 — Deep Indigo</div>
+        <div class="scheme-desc">Richer purple, more serious and academic than Option 1.</div>
+        <span class="scheme-tag recommended-tag">Recommended</span>
+      </div>
+      <div class="scheme-swatches">
+        <div class="swatch" style="background:#1E1B4B"></div>
+        <div class="swatch" style="background:#4338CA"></div>
+        <div class="swatch" style="background:#EAE8FF"></div>
+        <div class="swatch" style="background:#FEFEFE"></div>
+      </div>
+    </div>
+  </div>
+
+</div><!-- /grid -->
+
+</body>
+</html>
